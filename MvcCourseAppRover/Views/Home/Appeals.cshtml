@@ -1,0 +1,45 @@
+﻿@model List<MvcCourseAppRover.Models.STUDENT>
+@{
+    ViewBag.Title = "Appeals";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero_slider_container" style="height:50vh">
+    <div class="hero_slider owl-carousel">
+
+        <!-- Hero Slide -->
+        <div class="hero_slide">
+            <div class="hero_slide_background" style="background-image:url(/Content/images/slider_background.jpg)"></div>
+            <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+                <div class="hero_slide_content text-center">
+                    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="margin-top:-160px;"><span>All appeals</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="my-5 container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.NAME</td>
+                    <td>@student.SURNAME</td>
+                    <td>@student.MOBILE</td>
+                    <td>@student.EMAIL</td>
+                    <td><a href="/Home/Approve/@student.ID" class="btn btn-success">Təsdiqlə</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

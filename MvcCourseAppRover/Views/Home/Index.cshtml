@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="super_container">
+    <!-- Menu -->
+    <div class="menu_container menu_mm">
+
+        <!-- Menu Close Button -->
+        <div class="menu_close_container">
+            <div class="menu_close"></div>
+        </div>
+
+        <!-- Menu Items -->
+        <div class="menu_inner menu_mm">
+            <div class="menu menu_mm">
+                <ul class="menu_list menu_mm">
+                    <li class="menu_item menu_mm"><a href="#">Home</a></li>
+                    <li class="menu_item menu_mm"><a href="#">About us</a></li>
+                    <li class="menu_item menu_mm"><a href="courses.html">Courses</a></li>
+                    <li class="menu_item menu_mm"><a href="elements.html">Elements</a></li>
+                    <li class="menu_item menu_mm"><a href="news.html">News</a></li>
+                    <li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Menu Social -->
+
+                <div class="menu_social_container menu_mm">
+                    <ul class="menu_social menu_mm">
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item menu_mm"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="menu_copyright menu_mm">HajikhanovEH All rights reserved</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Home -->
+
+    <div class="home">
+
+        <!-- Hero Slider -->
+        <div class="hero_slider_container">
+            <div class="hero_slider owl-carousel">
+
+                <!-- Hero Slide -->
+                <div class="hero_slide">
+                    <div class="hero_slide_background" style="background-image:url(/Content/images/slider_background.jpg)"></div>
+                    <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+                        <div class="hero_slide_content text-center">
+                            <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Edcuation</span> today!</h1>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+            </div>
+
+            
+        </div>
+
+    </div>
+
+    <div class="hero_boxes">
+        <div class="hero_boxes_inner">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 hero_box_col">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="~/Content/images/professor.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h2 class="hero_box_title">Our Teachers</h2>
+                                <a href="teachers.html" class="hero_box_link">@Html.ActionLink("view more", "Teachers", "Home")</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 hero_box_col">
+                        <div class="hero_box d-flex flex-row align-items-center justify-content-start">
+                            <img src="~/Content/images/envelope.svg" class="svg" alt="">
+                            <div class="hero_box_content">
+                                <h2 class="hero_box_title">All appeals</h2>
+                                <a href="teachers.html" class="hero_box_link">@Html.ActionLink("view more", "Appeals", "Home")</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

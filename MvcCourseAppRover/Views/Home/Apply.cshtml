@@ -1,0 +1,53 @@
+﻿@model MvcCourseAppRover.Models.STUDENT
+@{
+    ViewBag.Title = "Apply";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="hero_slider_container" style="height:50vh">
+    <div class="hero_slider owl-carousel">
+
+        <!-- Hero Slide -->
+        <div class="hero_slide">
+            <div class="hero_slide_background" style="background-image:url(/Content/images/slider_background.jpg)"></div>
+            <div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+                <div class="hero_slide_content text-center">
+                    <h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut" style="margin-top:-160px;"><span>Apply</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    @using (Html.BeginForm("Apply", "Home", FormMethod.Post, new { @class = "modal-content animate", enctype = "multipart/form-data" }))
+    {
+
+        <div class="hero_slider_container">
+
+            <div class="form-group my-3 mx-3">
+                @Html.LabelFor(e => e.NAME, new { @class = "col-md-2" })
+                @Html.TextBoxFor(e => e.NAME, new { @placeholder = "Enter Name", @class = "form-control col-md-6" })
+                @Html.ValidationMessageFor(e => e.NAME)
+            </div>
+            <div class="form-group my-3 mx-3">
+                @Html.LabelFor(e => e.SURNAME, new { @class = "col-md-2" })
+                @Html.TextBoxFor(e => e.SURNAME, new { @placeholder = "Enter Surname", @class = "form-control col-md-6" })
+                @Html.ValidationMessageFor(e => e.SURNAME)
+            </div>
+            <div class="form-group my-3 mx-3">
+                @Html.LabelFor(e => e.MOBILE, new { @class = "col-md-2" })
+                @Html.TextBoxFor(e => e.MOBILE, new { @placeholder = "Enter mobile number", @class = "form-control col-md-6" })
+                @Html.ValidationMessageFor(e => e.MOBILE)
+            </div>
+            <div class="form-group my-3 mx-3">
+                @Html.LabelFor(e => e.EMAIL, new { @class = "col-md-2" })
+                @Html.TextBoxFor(e => e.EMAIL, new { @placeholder = "Enter Name", @class = "form-control col-md-6" })
+                @Html.ValidationMessageFor(e => e.EMAIL)
+            </div>
+
+
+
+            <button type="submit" class="btn btn-success mx-3 my-3">Apply</button>
+        </div>
+    }
+</div>
+
